@@ -3,8 +3,8 @@ class Passenger
 
   def initialize(person = {})
     @person = person
-    # @name = person["name"]
-    # @age = person["age"]
+    @name = person["name"]
+    @age = person["age"]
     @driver = false
   end
 

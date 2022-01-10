@@ -1,33 +1,36 @@
 class Vehicle
-  attr_accessor :year, :model, :make, :passengers
+  attr_accessor :year, :model, :make, :passengers, :num_adults
 
   def initialize(year, make, model)
     @year = year
     @model = model
     @make = make
     @passengers = []
-    @speed = 75
+    @speeding = false
+
   end
 
   def speeding?
-    @speed > 75
+    @speeding
   end
 
+
   def speed
-    @speed = 80
+    @speeding = true
   end
+
 
   def add_passenger(px)
     @passengers << px
   end
 
   def num_adults
-    accumulator = []
+    @num_adults = []
     @passengers.each do |adult|
       if adult.adult? == true
-        accumulator << adult
+        @num_adults << adult
       end
     end
-    accumulator.count
+    @num_adults.count
   end
 end

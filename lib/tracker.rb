@@ -6,6 +6,7 @@ attr_accessor :street1, :street2, :intersection, :cars
     @street1 = street1
     @street2 = street2
     @cars = []
+    @people = []
     @cars_speeding = []
 
   end
@@ -15,5 +16,9 @@ attr_accessor :street1, :street2, :intersection, :cars
     return @cars
   end
 
+  def humans
+   @cars.each do |peeps|
+     @people << peeps.passengers
+  end
 
 end
