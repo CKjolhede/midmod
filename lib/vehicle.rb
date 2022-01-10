@@ -1,6 +1,5 @@
 class Vehicle
-  attr_accessor :year, :model, :make, :passengers
-
+  attr_accessor :year, :model, :make, :passengers, :adults     
   def initialize(year, make, model)
     @year = year
     @model = model
@@ -23,12 +22,12 @@ class Vehicle
   end
 
   def num_adults
-    accumulator = []
+    @adults = []
     @passengers.each do |adult|
       if adult.adult? == true
-        accumulator << adult
+        @adults << adult
       end
     end
-    accumulator.count
+    @adults.count
   end
 end
