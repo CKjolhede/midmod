@@ -69,7 +69,7 @@ describe Vehicle do
     expect(vehicle.passengers).to eq([])
   end
 
-  it 'can add passengers to the vehicle' do
+  it 'can add passengers in the vehicle' do
     vehicle = Vehicle.new("2001", "Honda", "Civic")
     charlie = Passenger.new({"name" => "Charlie", "age" => 18})
     jude = Passenger.new({"name" => "Jude", "age" => 20})
